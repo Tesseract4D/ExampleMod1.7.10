@@ -1,4 +1,4 @@
-package com.myname.mymodid;
+package mods.tesseract.mymodid;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
