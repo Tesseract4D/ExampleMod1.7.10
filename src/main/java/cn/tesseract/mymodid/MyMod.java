@@ -1,18 +1,14 @@
-package mods.tesseract.mymodid;
+package cn.tesseract.mymodid;
 
+import cn.tesseract.mycelium.asm.minecraft.HookLoader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.config.Configuration;
-import net.tclproject.mysteriumlib.asm.common.CustomLoadingPlugin;
-import net.tclproject.mysteriumlib.asm.common.FirstClassTransformer;
-import net.tclproject.mysteriumlib.asm.core.MiscUtils;
-import org.lwjgl.opengl.Display;
 
 import java.io.File;
 
 @Mod(modid = "mymodid", acceptedMinecraftVersions = "[1.7.10]")
-public class MyMod extends CustomLoadingPlugin {
+public class MyMod extends HookLoader {
     public static String greeting;
 
     @Mod.EventHandler
@@ -29,7 +25,7 @@ public class MyMod extends CustomLoadingPlugin {
     }
 
     @Override
-    public void registerFixes() {
-        registerClassWithFixes("mods.tesseract.mymodid.Fixes");
+    protected void registerHooks() {
+        registerHookContainer(MinecraftHook.class.getName());
     }
 }
