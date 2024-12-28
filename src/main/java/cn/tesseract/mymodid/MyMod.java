@@ -7,7 +7,7 @@ import net.minecraftforge.common.config.Configuration;
 
 import java.io.File;
 
-@Mod(modid = "mymodid", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(modid = "mymodid", acceptedMinecraftVersions = "[1.7.10]", version = Tags.VERSION)
 public class MyMod extends HookLoader {
     public static String greeting;
 
